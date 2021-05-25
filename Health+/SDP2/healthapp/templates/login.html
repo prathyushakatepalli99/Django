@@ -1,0 +1,83 @@
+<html> 
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> Login Page </title>
+<style> 
+Body {
+  background-image: url("https://cdn.expresshealthcare.in/wp-content/uploads/2020/01/22122412/Doctors-consultation.jpg");
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+  background-position: center;
+   background-size: cover;
+ background-color: black;
+}
+button { 
+        
+       width: 100%;
+        color: orange; 
+        padding: 15px; 
+        margin: 10px 0px; 
+        border: none; 
+        cursor: pointer; 
+         } 
+ form { 
+        border: 3px solid #f1f1f1; 
+    } 
+ input[type=text], input[type=password] { 
+        width: 100%; 
+        margin: 8px 0;
+        padding: 12px 20px; 
+        display: inline-block; 
+        border: 2px solid green; 
+        box-sizing: border-box; 
+    }
+ button:hover { 
+        opacity: 0.7; 
+    } 
+  .cancelbtn { 
+        width: auto; 
+        padding: 10px 18px;
+        margin: 10px 5px;
+    } 
+      
+   
+ .container { 
+        padding: 25px; 
+        
+    } 
+	#id1
+{
+margin: 0 auto;
+color: black;
+border: solid 1px black;
+width: 30%;
+text-align: center;
+
+}
+</style> 
+</head>  
+<body>  
+    <center> <h1>Login into your account </h1> </center> 
+	<div id="id1">
+    <form method='post'>
+        <div class="container"> 
+            {% csrf_token %}
+            <label>Username : </label> 
+            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Password : </label> 
+            <input type="password" placeholder="Enter Password" name="password" required>
+            
+                   <button type="submit">Login</button>
+
+
+
+
+            <input type="checkbox" checked="checked"> Remember me s
+            
+             <a href="#">Forget password? </a> 
+        </div> 
+     
+    </form>  
+<div>	
+</body>   
+</html>
